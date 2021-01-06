@@ -1,0 +1,11 @@
+{
+    "ecmaFeature": {
+        "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "extends": "./tsconfig.json",
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ]
+}
