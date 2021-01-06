@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     root: {
         display: "flex",
         justifyContent: "center",
+        padding: `${theme.spacing(3)}px 0px`,
         maxWidth: theme.breakpoints.width("xl"),
         [theme.breakpoints.down("sm")]:{
             display: "none"
