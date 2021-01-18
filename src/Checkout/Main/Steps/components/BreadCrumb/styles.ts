@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: "100%",
         justifyContent: "space-between",
         zIndex: 2,
+        marginBottom: `${theme.spacing(6)}px`,
         [theme.breakpoints.down("sm")]:{
             width: "calc(50% + 55.5px)",
             alignItems: "center"

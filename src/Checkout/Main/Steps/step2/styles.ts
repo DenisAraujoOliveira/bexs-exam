@@ -3,6 +3,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme: Theme) => ({
     step2: {
         zIndex: 2,
+        display: "flex",
         [theme.breakpoints.down("sm")]:{
             display: "flex",
             flexDirection: "column",
@@ -11,8 +12,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     firstItem:{
         display: "flex",
-        alignItems: "center",
-        margin: `${theme.spacing(6)}px 0px ${theme.spacing(2)}px`
+        flexDirection: "column",
+        [theme.breakpoints.down("sm")]:{
+            marginBottom: `${theme.spacing(5)}px`
+        }
+    },
+    addCard:{
+        display: "flex",
     },
     img:{
         width: "40px",

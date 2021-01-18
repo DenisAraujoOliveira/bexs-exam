@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         left: 0,
         top: 0,
         [theme.breakpoints.down("sm")]:{
-            width: "100%"
+            width: "100%",
+            maxHeight: "310px"
         }
     }
 }));

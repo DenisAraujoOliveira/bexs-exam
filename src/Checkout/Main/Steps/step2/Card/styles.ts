@@ -2,12 +2,11 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
     card: {
-        width: "40%",
-        maxWidth: "364px",
+        width: "364px",
+        marginTop: `${theme.spacing(2)}px`,
         transformStyle: "preserve-3d",
         [theme.breakpoints.down("sm")]:{
             width: "280px",
-            marginBottom: "-60px",
         }
     },
     containerCard: {
