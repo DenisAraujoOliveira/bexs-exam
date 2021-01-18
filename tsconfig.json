@@ -18,7 +18,6 @@
     "isolatedModules": true,
     "incremental": false,
     "noEmit": true,
-    "emitDeclarationOnly": true,
     "composite": false,
     "declaration": true,
     "jsx": "react-jsx",
@@ -29,7 +28,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src"
+    "src/**/*"
   ],
   "exclude": [
     "**/*.stories.*",

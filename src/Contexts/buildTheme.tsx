@@ -26,9 +26,11 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             main: Theme.primary,
+            contrastText: Theme.contrastText
         },
         background: {
-            default: Theme.background
+            default: Theme.background,
+            paper: Theme.backgroundPaper
         }
     },
     typography: {
