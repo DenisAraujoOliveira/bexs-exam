@@ -12,7 +12,7 @@ import { useCardContext } from "../CardContext";
 function ContentStep2() {
     const classes = useStyles({});
     const formRef = useRef<FormHandles>(null);
-    const { card, setCard } = useCardContext();
+    const { card, setCard, isFront, setIsFront } = useCardContext();
     const submitForm = async (formData) => new Promise(async (resolve) => {
         try {
             formRef.current?.setErrors({});
@@ -45,8 +45,16 @@ function ContentStep2() {
     const onChanges = (formData) =>{
         setCard({...card,[formData.target.name]: formData.target.value});
     };
+    const onFocus = (formData)=>{
+        if(formData.target.name === "securityCode" ){
+            setIsFront(false);
+        }else{
+            if(!isFront)
+                setIsFront(true);
+        }
+    };
     return (
-        <Form classname={classes.contentStep2} ref={formRef} handleChange={onChanges} handleSubmit={submitForm}>
+        <Form classname={classes.contentStep2} ref={formRef} handleFocus={onFocus} handleChange={onChanges} handleSubmit={submitForm}>
             <Input name="number" label="Número do cartão" maxLength={16} type="text" />
             <Input name="name" label="Nome (igual ao cartão)" maxLength={20} type="text" />
             <div className={classes.wrapper}>

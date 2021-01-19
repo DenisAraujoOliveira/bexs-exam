@@ -8,16 +8,18 @@ interface FormProps {
     classname: string;
     handleSubmit: (data: any) => void;
     handleChange?: (data: any) => void;
+    handleFocus?: (data: any) => void;
 }
 
 const Form = forwardRef<FormHandles, FormProps>(
-    ({ handleSubmit, classname ,children,handleChange }, ref) => {
+    ({ handleSubmit, classname ,children,handleChange,handleFocus }, ref) => {
         const classes = useStyles({});
         return (
             <UnformForm
                 ref={ref}
                 onSubmit={handleSubmit}
                 onChange={handleChange}
+                onFocus={handleFocus}
                 className={`${classes.form} ${classname}`}>
                 {children}
             </UnformForm>
