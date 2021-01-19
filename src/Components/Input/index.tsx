@@ -29,34 +29,34 @@ const Input: React.FC<InputProps> =
 
         return (
             <>
-                {type === "date" ?
-                    <TextField
+
+                <TextField
+                    className={`${classes.inputs} ${classname}`}
+                    name={name}
+                    inputRef={inputRef}
+                    label={label}
+                    type={type}
+                    InputLabelProps={{
+                        style: error ? { color: "#FF3344" } : { color: "" }
+                    }}
+                    inputProps={{
+                        maxLength: maxLength
+                    }}
+                />
+                {/* <TextField
                         className={`${classes.inputs} ${classname}`}
                         name={name}
                         inputRef={inputRef}
                         label={label}
                         type={type}
+                        
                         InputLabelProps={{
                             style: error ? { color: "#FF3344" } : { color: "" }
                         }}
                         inputProps={{
                             maxLength: maxLength
                         }}
-                    />
-                    :
-                    <TextField
-                        className={`${classes.inputs} ${classname}`}
-                        name={name}
-                        inputRef={inputRef}
-                        label={label}
-                        type={type}
-                        InputLabelProps={{
-                            style: error ? { color: "#FF3344" } : { color: "" }
-                        }}
-                        inputProps={{
-                            maxLength: maxLength
-                        }}
-                    />}
+                    /> */}
                 {error && (
                     <MessageValidation ref={errorMessageRef} message={error} />
                 )}
