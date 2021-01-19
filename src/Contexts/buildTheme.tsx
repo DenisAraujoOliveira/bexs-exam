@@ -31,7 +31,13 @@ const theme = createMuiTheme({
         background: {
             default: Theme.background,
             paper: Theme.backgroundPaper
+        },
+        error:{
+            main: Theme.errorMain
         }
+    },
+    shape:{
+        borderRadius: 10,
     },
     typography: {
         color: Theme.color,

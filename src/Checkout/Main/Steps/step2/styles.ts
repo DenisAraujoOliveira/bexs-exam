@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     step2: {
         zIndex: 2,
         display: "flex",
+        justifyContent: "space-between",
         [theme.breakpoints.down("sm")]:{
             display: "flex",
             flexDirection: "column",
