@@ -51,7 +51,7 @@ function ContentStep2() {
             <Input name="name" label="Nome (igual ao cartão)" maxLength={20} type="text" />
             <div className={classes.wrapper}>
                 <div className={classes.wrapperInputs}>
-                    <Input name="date" label="Validade" maxLength={5} type="date" />
+                    <Input name="date" label="Validade" maxLength={5} type="text" />
                 </div>
                 <div className={classes.wrapperInputs}>
                     <Input name="securityCode" label="CVV" maxLength={3} type="text" />
